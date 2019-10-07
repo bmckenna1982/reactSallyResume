@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='application-root'></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">    
+    //app component
+    function App(props) {       
+        return <React.Fragment>
+            <header>
+                <h1>{props.name}</h1>
+                <p>Software Engineer</p>
+            </header>
+            <main>
+                <section className="workExperience">
+                    <h2>Work Experience</h2>
+                    <h3>Inacomp 06/2014 - 07/2018</h3>
+                    <p>Systems Engineer</p>
+                    <ul>
+                        <li>Plan and implement IT infrastructure for new client offices</li>
+                        <li>Design and create domain environments</li>
+                        <li>Support user system environments including desktop and server environments</li>
+                    </ul>
+                    <h3>KMA One 07/2004 - 06/2014</h3>
+                    <p>Application Developer</p>
+                    <ul>
+                        <li>Design, develop and support complex pricing models for server replacement and sales tools</li>
+                        <li>Designed and developed graphical marketing materials for technology companies</li>
+                        <li>Created video marketing productions including writing scripts, creating graphical media, and producing final edits</li>
+                    </ul>
+                </section>
+                <section className="education">
+                    <h2>Education</h2>
+                    <h3>Thinkful Coding Bootcamp 07/2018 - 01/2019</h3>
+                    <p>Full Stack Flex development</p>
+                    <ul>
+                        <li>Studied basics of Semantic HTML</li>
+                        <li>Learned how to style webpages with CSS</li>
+                        <li>Studied JavaScript and how to code interactive webpages</li>
+                    </ul>
+                    <h3>University of Georgia 08/2001 - 06/2004</h3>
+                    <p>Computer Science and Engineering</p>
+                    <ul>
+                        <li>Studied the basics of computer language</li>
+                        <li>Learned the components and functions of computer systems</li>
+                    </ul>
+                </section>
+                <section className="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>JQuery</li>
+                    </ul>
+                </section>
+            </main>
+            <footer>
+                <address>
+                    <p>This page was authored by: Sally Student</p>
+                    <p>Email: <a href="mailto:sallystudent2019@gmail.com">sallystudent2019@gmail.com</a></p>
+                    <p>Phone: 555-867-5309</p>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally Student image" width= "250px"/>
+                </address>
+            </footer>
+        </React.Fragment>;
+    }
+
+    ReactDOM.render(
+        <App name='Sally Student'/>,
+        document.querySelector('#application-root')
+    );
+    </script>
+</body>
+</html>
